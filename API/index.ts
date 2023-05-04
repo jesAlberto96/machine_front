@@ -44,8 +44,6 @@ function handleErrorsGET(error: any){
 const API = {
     async GET(path: any = ""){
         try{
-            await config.dispatch('takeToken');
-
             const response = await axios.get(path, {
                 headers: {
                     'content-type': 'application/json',
@@ -61,8 +59,6 @@ const API = {
 
     async POST(path: any, data: any){
         try{
-            await config.dispatch('takeToken');
-
             const response = await axios.post(path,
                 data,
                 {
@@ -80,8 +76,6 @@ const API = {
 
     async PUT(path: any, data: any){
         try{
-            await config.dispatch('takeToken');
-
             const response = await axios.put(path,
                 data,
                 {

@@ -4,8 +4,8 @@ import { API } from '@/API';
 
 export default createStore({
     actions: {
-        async findHairExperts(){
-            return await API.GET(`${config.getters.getPath}/api/v1/hair-experts/all`);
+        async findAll(){
+            return await API.GET(`${config.getters.getPath}/api/v1/coins`);
         },
     }
 })
