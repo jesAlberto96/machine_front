@@ -1,27 +1,29 @@
 <template>
     <div>
-        <button v-text="text" :disabled="disabled"></button>
+        <button :class="class" v-text="text" :disabled="disabled"></button>
     </div>
 </template>
 
 
 <script>
-import { ref, defineComponent  } from 'vue';
+import { defineComponent  } from 'vue';
 
 export default defineComponent({
     props: {
         text: { type: String, default: "" },
+        class: { type: String, default: "btn btn-secondary" },
         disabled: { type: Boolean, default: false },
-    },
-
-    setup(props) {
     }
 });
 </script>
 
 <style scoped>
+    div{
+        width: 100%;
+        margin-top: 20px;
+    }
+
     button{
-        margin-bottom: 1vh;
-        width: 6vh;
+        width: 100%;
     }
 </style>

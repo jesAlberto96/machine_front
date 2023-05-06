@@ -3,16 +3,7 @@ import config from '@/store/config'
 
 function handleErrorsPOST(data: any){
     if ('errors' in data){
-        const errors = Object.values(data.errors);
-        const finalErrors: any = [];
-        errors.map(function (error: any) {
-            finalErrors.push(error);
-        });
-
-        return {
-            success: false,
-            errors: finalErrors
-        }
+        return data;
     }
 
     return {

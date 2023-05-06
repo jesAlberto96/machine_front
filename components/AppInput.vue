@@ -1,13 +1,13 @@
 <template>
     <div>
         <label v-text="label"></label>
-        <input :type="type" :readonly="readonly" :value="value">
+        <input class="form-control" :type="type" :readonly="readonly" :value="value">
     </div>
 </template>
 
 
 <script>
-import { ref, defineComponent  } from 'vue';
+import { defineComponent  } from 'vue';
 
 export default defineComponent({
     props: {
