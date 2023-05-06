@@ -127,21 +127,25 @@ const executeBuy = async() => {
 }
 
 const cancelBuy = async () => {
-	price.value = '0';
-	total.value = '0';
-  	product_id.value = '';
-	img_product_selected.value = '';
-	coins_inserted.value = [];
-	text_display.value = '';
+	if (coins_inserted.value.length == 0){
+		price.value = '0';
+		total.value = '0';
+		product_id.value = '';
+		img_product_selected.value = '';
+		coins_inserted.value = [];
+		text_display.value = '';
+	}
 }
 
 const returnCoin = async () => {
-	text_display.value = 'Returning coins inserted... <br> -> ' + String(coins_inserted.value);
-	price.value = '0';
-	total.value = '0';
-  	product_id.value = '';
-	img_product_selected.value = '';
-	coins_inserted.value = [];
+	if (coins_inserted.value.length != 0){
+		text_display.value = 'Returning coins inserted... <br> -> ' + String(coins_inserted.value);
+		price.value = '0';
+		total.value = '0';
+		product_id.value = '';
+		img_product_selected.value = '';
+		coins_inserted.value = [];
+	}
 }
 
 findCoins();
