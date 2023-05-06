@@ -3,7 +3,7 @@ import { createStore } from 'vuex';
 export default createStore({
     state () {
         return {
-            path: "https://apptest.innguia.com/",
+            path: "https://apptest.innguia.com",
             errors: [],
         }
     },
